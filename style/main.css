@@ -1,3 +1,18 @@
-img {
-  width: 200px;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* height never overflows */
+}
+
+canvas {
+  display: block;
+  aspect-ratio: 16 / 9;
+  /* Largest size that fits viewport while preserving aspect */
+  width: min(100vw, calc(100vh * (16 / 9)));
+  height: auto;
+  max-height: 100vh;
+  margin: 0 auto; /* center horizontally when pillarboxed */
+  image-rendering: pixelated;
 }
